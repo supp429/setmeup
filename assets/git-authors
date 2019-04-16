@@ -1,0 +1,5 @@
+pairs:
+  su: Satheesh Uppalapati; Satheesh.Uppalapati@acme.com
+email:
+  domain: acme.com
+email_template: '{{.Username}}'
