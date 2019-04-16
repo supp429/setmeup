@@ -1,0 +1,28 @@
+call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-sensible'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+" {{{
+  let g:fzf_nvim_statusline = 0 " disable statusline overwriting
+  nnoremap <silent> <leader>f :Files<CR>
+" }}}
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'scrooloose/nerdcommenter'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'sheerun/vim-polyglot'
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'hashivim/vim-terraform'
+Plug 'hashivim/vim-packer'
+call plug#end()
+
+syntax on
+filetype plugin on
+set number
+set nowrap
+color dracula
+
+let g:terraform_align=1
+let g:terraform_fold_sections=1
+let g:terraform_remap_spacebar=1
+let g:terraform_commentstring='//%s'
+let g:terraform_fmt_on_save=1

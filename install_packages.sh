@@ -63,6 +63,7 @@ echo "#### Setting up ZSH as default"
 chsh -s /bin/zsh
 echo "#### Install Oh My ZSH"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+cd $ZSH; git config transfer.fsckObjects false
 echo "#### Setting up Zeta theme for ZSH"
 mkdir -p $ZSH_CUSTOM/themes
 git clone https://github.com/skylerlee/zeta-zsh-theme.git /tmp/zeta-zsh-theme
@@ -136,3 +137,6 @@ git config --global alias.up "pull --rebase --autostash"
 # Setup iterm theme
 git clone https://github.com/dracula/iterm.git ~/iterm
 cp ./assets/com.googlecode.iterm2.plist ~/Library/Preferences/
+
+# Setup vim
+cp ./assets/vimrc ~/.vimrc
