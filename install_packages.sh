@@ -28,6 +28,7 @@ brew install gpg
 brew cask install iterm2
 brew cask install google-chrome
 brew cask install slack
+brew install ipcalc
 
 # Install Python
 brew install python2
